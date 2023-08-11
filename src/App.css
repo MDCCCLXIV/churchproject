@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400&family=Edu+SA+Beginner&family=Poppins:wght@300&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -6,4 +7,34 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+
+* {
+  /* outline: 1px solid red; */
+  font-family: 'Comic Neue';
+
+  /* font-family: 'Poppins'; */
+}
+
+@layer base {
+  button {
+    @apply rounded-3xl text-white font-medium p-2 bg-orange-400
+  }
+
+}
+
+@layer utilities {
+
+  /* Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+  }
 }
