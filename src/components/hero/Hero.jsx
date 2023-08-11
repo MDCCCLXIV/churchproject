@@ -22,7 +22,7 @@ const Hero = () => {
   const currentImage = images[activeIndex];
 
   return (
-    <div className='flex flex-col items-center justify-center w-full h-[90vh] duration-700 ease-linear text-white bg-cover bg-center bg-no-repeat' style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/${currentImage.image})` }}>
+    <div className='flex flex-col items-center justify-center w-full h-[90vh] duration-700 ease-linear text-white bg-cover bg-center bg-no-repeat' style={{ backgroundImage: `url(${import.meta.env.BASE_URL}${currentImage.image})` }}>
       <div className="flex flex-col md:mx-auto md:max-w-6xl w-full h-full justify-between items-center md:mt-[4%] md:mb-3">
         <div className='flex flex-col h-full w-full justify-between'>
           <div className='flex flex-col w-full m-auto justify-center text-center items-center md:my-auto h-[70%]'>

@@ -37,6 +37,7 @@ const Header = () => {
         :
         !openElement.current.contains(e.target) && closeMenu()
     }
+     const backgroundImageUrl = `${import.meta.env.BASE_URL}church1.avif`;
 
   return (
     <div className="flex flex-col w-full">
@@ -75,7 +76,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-     <div ref={openElement} className="w-full h-screen pt-9 ease-in-out duration-700 bg-cover bg-no-repeat bg-center z-40 fixed" style={{ display: !hamburger ? "block" : "none",backgroundImage:`url(${process.env.PUBLIC_URL}/church1.avif` }}>
+     <div ref={openElement} className="w-full h-screen pt-9 ease-in-out duration-700 bg-cover bg-no-repeat bg-center z-40 fixed" style={{ display: !hamburger ? "block" : "none", backgroundImage: `url(${backgroundImageUrl})` }}>
         <Menu />
       </div>
     </div>
