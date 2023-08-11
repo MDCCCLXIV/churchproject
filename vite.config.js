@@ -9,5 +9,5 @@ export default defineConfig({
   build: {
     outDir: 'build',
   },
-  base: '/mychurch/',
+  base: '/churchproject/',
 })
