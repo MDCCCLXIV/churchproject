@@ -7,7 +7,7 @@ const UserLogin = () => {
   return (
    <div className='flex flex-col  w-full h-[80vh] md:h-[100vh] pt-4'>
          <div className="flex flex-col w-full  h-[90%] m-auto md:max-w-6xl">
-            <form className="flex flex-col h-[65%] md:h-[50%] w-[95%] md:w-[33%] shadow-lg p-1 justify-items-center items-center m-auto rounded bg-white">
+            <form className="flex flex-col h-[65%] md:h-[50%] w-[80%] md:w-[33%] shadow-lg p-1 justify-items-center items-center m-auto rounded bg-white">
                 <div className="flex flex-col w-full m-auto">
                         <span className='mx-auto text-3xl mt-2'>Sign In</span>
                         <FormInput placeholder={"Email"} type={"text"} />
