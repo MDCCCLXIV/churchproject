@@ -33,7 +33,7 @@ const Password = ({placeholder}) => {
         <label
           className={`absolute left-2 top-3.5 text-base transition-all transform origin-top ${
             isActive
-              ? 'text-orange-400 bg-white text-sm -translate-y-4 -translate-x-1/10 px-1 duration-300'
+              ? 'text-orange-400 bg-white text-sm -translate-y-5 -translate-x-1/10 px-1 duration-300'
               : 'text-gray-400'
           }`}
           htmlFor="password"
