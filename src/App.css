@@ -8,11 +8,19 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+@font-face {
+  font-family: 'Acumin Pro Regular';
+  src: url('../fonts/FontsFree-Net-Acumin-Pro-Book.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+ 
+}
 
 * {
   /* outline: 1px solid red; */
   font-family: 'Comic Neue';
+  /* font-family: 'Acumin Pro Regular'; */
+  /* color:#666633; */
 
   /* font-family: 'Poppins'; */
 }

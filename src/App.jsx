@@ -9,7 +9,7 @@ import SignUp from './pages/SignUp';
 
 function App() {
   return (
-    <div className='bg-gray-100'>
+    <div className='bg-gray-100 tracking-normal'>
       <Router>
         <Header />
         <Routes>
