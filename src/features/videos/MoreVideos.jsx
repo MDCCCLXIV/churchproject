@@ -3,11 +3,11 @@ import { AiOutlineCalendar } from 'react-icons/ai';
 
 const MoreVideos = () => {
   const messages = [
-    { Title: 'Life with Christ', Date: '01/01/2023', image: 'church2.avif' },
-    { Title: 'Life with Christ', Date: '01/01/2023', image: 'church3.avif' },
-    { Title: 'Life with Christ', Date: '01/01/2023', image: 'church1.avif' },
-    { Title: 'Life with Christ', Date: '01/01/2023', image: 'church4.avif' },
-    { Title: 'Life with Christ', Date: '01/01/2023', image: 'church1.avif' }
+    { Title: 'Life with Christ', Date: '01/01/2023', image: 'src/assets/images/church2.avif' },
+    { Title: 'Life with Christ', Date: '01/01/2023', image: 'src/assets/images/church3.avif' },
+    { Title: 'Life with Christ', Date: '01/01/2023', image: 'src/assets/images/church1.avif' },
+    { Title: 'Life with Christ', Date: '01/01/2023', image: 'src/assets/images/church4.avif' },
+    { Title: 'Life with Christ', Date: '01/01/2023', image: 'src/assets/images/church1.avif' }
   ];
 
   return (
@@ -22,7 +22,7 @@ const MoreVideos = () => {
                 <img className='object-center w-full h-full object-cover' src={`${import.meta.env.BASE_URL}${message.image}`} alt='' />
               </div>
               <div className='flex w-full h-[35%] flex-col text-sm'>
-                <span className='w-full h-[50%] font-medium'>{message.Title}</span>
+                <span className='w-full h-[50%]  text-base'>{message.Title}</span>
                 <span className='w-full h-[50%] flex'><AiOutlineCalendar size={20} />{message.Date}</span>
               </div>
             </div>

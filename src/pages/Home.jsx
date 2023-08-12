@@ -5,6 +5,8 @@ import MoreVideos from '../features/videos/MoreVideos'
 import Connections from '../components/connections/Connections'
 // import GroupCards from '../components/connections/GroupCards'
 import About from '../components/about/About'
+// import Newsletter from './components/newsletter/Newsletter';
+import Newsletter from '../components/newsletter/Newsletter'
 // import Menu from '../components/menu/Menu'
 
 const Home = () => {
@@ -15,6 +17,8 @@ const Home = () => {
       <Services />
       <MoreVideos />
       <Connections />
+      <Newsletter />
+
     
 
         

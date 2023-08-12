@@ -3,6 +3,7 @@ import { AiOutlinePlayCircle, AiOutlineSearch, AiOutlineMenu, AiOutlineClose } f
 import { RiAccountCircleLine } from 'react-icons/ri';
 import { LiaDonateSolid } from 'react-icons/lia';
 import Menu from '../menu/Menu';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   const [hamburger, setHamburger] = useState(true);
@@ -37,7 +38,7 @@ const Header = () => {
         :
         !openElement.current.contains(e.target) && closeMenu()
     }
-     const backgroundImageUrl = `${import.meta.env.BASE_URL}church1.avif`;
+     const backgroundImageUrl = `${import.meta.env.BASE_URL}src/assets/images/church1.avif`;
 
   return (
     <div className="flex flex-col w-full">
@@ -58,10 +59,10 @@ const Header = () => {
             <span className="text-xl font-normal font-mono my-auto m-1 md:hidden">GLC</span>
           </div>
           <div className="flex">
-            <section className="flex m-1  hover:cursor-pointer hover:text-purple-800 ease-in-out">
+            <Link to="/churchproject/login" className="flex m-1  hover:cursor-pointer hover:text-purple-800 ease-in-out">
               <RiAccountCircleLine size={25} />
               <span className="hidden md:flex m-auto mx-1">Account</span>
-            </section>
+            </Link>
             <section className="flex m-1  hover:cursor-pointer hover:text-purple-800 ease-in-out">
               <LiaDonateSolid size={25} />
               <span className="hidden md:flex m-auto mx-1">Give</span>
@@ -79,6 +80,7 @@ const Header = () => {
      <div ref={openElement} className="w-full h-screen pt-9 ease-in-out duration-700 bg-cover bg-no-repeat bg-center z-40 fixed" style={{ display: !hamburger ? "block" : "none", backgroundImage: `url(${backgroundImageUrl})` }}>
         <Menu />
       </div>
+      
     </div>
   );
 };

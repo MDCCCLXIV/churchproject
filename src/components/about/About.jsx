@@ -3,9 +3,9 @@ import { LuCalendarDays } from 'react-icons/lu';
 
 const About = () => {
   const eventsData = [
-    { Time: '1800hrs-1900hrs', event: 'Bible Study', Date: 'Wednesdays', image: 'church2.avif' },
-    { Time: '1800hrs-1900hrs', event: 'Prayers', Date: 'Fridays', image: 'church3.avif' },
-    { Time: '0900hrs-1300hrs', event: 'Sunday Services', Date: 'Sundays', image: 'church1.avif' }
+    { Time: '1800hrs-1900hrs', event: 'Bible Study', Date: 'Wednesdays', image: 'src/assets/images/church2.avif' },
+    { Time: '1800hrs-1900hrs', event: 'Prayers', Date: 'Fridays', image: 'src/assets/images/church3.avif' },
+    { Time: '0900hrs-1300hrs', event: 'Sunday Services', Date: 'Sundays', image: 'src/assets/images/church1.avif' }
   ];
 
   return (

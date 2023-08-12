@@ -5,7 +5,7 @@ import { AiOutlineCopyrightCircle } from 'react-icons/ai';
 
 const Footer = () => {
   return (
-    <div className='w-full h-[75vh] md:h-[55vh] mt-1 text-sm bg-cover bg-center bg-no-repeat text-white' style={{ backgroundImage: `url(${import.meta.env.BASE_URL}/wbg3.avif)` }}>
+    <div className='w-full h-[75vh] md:h-[55vh] mt-1 text-sm bg-cover bg-center bg-no-repeat text-white' style={{ backgroundImage: `url(${import.meta.env.BASE_URL}src/assets/images/wbg3.avif)` }}>
       <div className='bg-black/40 backdrop-blur-sm w-full h-full'>
         <div className='block container w-full h-full m-auto mt-2 max-w-6xl p-1 md:p-2 '>
           <div className='block md:flex h-[90%] md:h-[80%] border-b-2 border-orange-400'>

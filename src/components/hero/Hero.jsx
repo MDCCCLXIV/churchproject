@@ -2,10 +2,10 @@ import React, { useState, useEffect } from 'react';
 
 const Hero = () => {
   const images = [
-    { image: 'church4.avif', description: "But I'm here to help with a solution that is not only easy, it's free" },
-    { image: 'church1.avif', description: "For God gave us a spirit not of fear but of power and love and self-control." },
-    { image: 'church2.avif', description: "Be watchful, stand firm in the faith, act like men, be strong." },
-    { image: 'church3.avif', description: "Wait for the Lord; be strong, and let your heart take courage; wait for the Lord!" }
+    { image: 'src/assets/images/church4.avif', description: "But I'm here to help with a solution that is not only easy, it's free" },
+    { image: 'src/assets/images/church1.avif', description: "For God gave us a spirit not of fear but of power and love and self-control." },
+    { image: 'src/assets/images/church2.avif', description: "Be watchful, stand firm in the faith, act like men, be strong." },
+    { image: 'src/assets/images/church3.avif', description: "Wait for the Lord; be strong, and let your heart take courage; wait for the Lord!" }
   ];
   const [activeIndex, setActiveIndex] = useState(0);
 
