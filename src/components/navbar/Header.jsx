@@ -38,7 +38,7 @@ const Header = () => {
         :
         !openElement.current.contains(e.target) && closeMenu()
     }
-     const backgroundImageUrl = `${import.meta.env.BASE_URL}public/assets/images/church1.avif`;
+     const backgroundImageUrl = `${import.meta.env.BASE_URL}/assets/images/church1.avif`;
 
   return (
     <div className="flex flex-col w-full">

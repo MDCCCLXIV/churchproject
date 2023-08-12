@@ -2,12 +2,12 @@ import React from 'react';
 
 const GroupCards = () => {
   const connection = [
-    { Title: 'Kids', Date: '01/01/2023', image: 'public/assets/images/kids.webp' },
-    { Title: 'Ladies', Date: '01/01/2023', image: 'public/assets/images/women.jpg' },
-    { Title: 'Men', Date: '01/01/2023', image: 'public/assets/images/men.webp' },
-    { Title: 'Youth', Date: '01/01/2023', image: 'public/assets/images/church4.avif' },
-    { Title: 'Welfare', Date: '01/01/2023', image: 'public/assets/images/church4.avif' },
-    { Title: 'Worship Team', Date: '01/01/2023', image: 'public/assets/images/church1.avif' }
+    { Title: 'Kids', Date: '01/01/2023', image: '/assets/images/kids.webp' },
+    { Title: 'Ladies', Date: '01/01/2023', image: '/assets/images/women.jpg' },
+    { Title: 'Men', Date: '01/01/2023', image: '/assets/images/men.webp' },
+    { Title: 'Youth', Date: '01/01/2023', image: '/assets/images/church4.avif' },
+    { Title: 'Welfare', Date: '01/01/2023', image: '/assets/images/church4.avif' },
+    { Title: 'Worship Team', Date: '01/01/2023', image: '/assets/images/church1.avif' }
   ];
 
   return (
