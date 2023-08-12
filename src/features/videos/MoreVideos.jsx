@@ -3,11 +3,11 @@ import { AiOutlineCalendar } from 'react-icons/ai';
 
 const MoreVideos = () => {
   const messages = [
-    { Title: 'Life with Christ', Date: '01/01/2023', image: 'src/assets/images/church2.avif' },
-    { Title: 'Life with Christ', Date: '01/01/2023', image: 'src/assets/images/church3.avif' },
-    { Title: 'Life with Christ', Date: '01/01/2023', image: 'src/assets/images/church1.avif' },
-    { Title: 'Life with Christ', Date: '01/01/2023', image: 'src/assets/images/church4.avif' },
-    { Title: 'Life with Christ', Date: '01/01/2023', image: 'src/assets/images/church1.avif' }
+    { Title: 'Life with Christ', Date: '01/01/2023', image: 'public/assets/images/church2.avif' },
+    { Title: 'Life with Christ', Date: '01/01/2023', image: 'public/assets/images/church3.avif' },
+    { Title: 'Life with Christ', Date: '01/01/2023', image: 'public/assets/images/church1.avif' },
+    { Title: 'Life with Christ', Date: '01/01/2023', image: 'public/assets/images/church4.avif' },
+    { Title: 'Life with Christ', Date: '01/01/2023', image: 'public/assets/images/church1.avif' }
   ];
 
   return (
