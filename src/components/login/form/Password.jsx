@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { AiOutlineEyeInvisible } from 'react-icons/ai';
 import { FaEye } from 'react-icons/fa';
 
-const Password = () => {
+const Password = ({placeholder}) => {
   const [isActive, setIsActive] = useState(false);
   const [password, setPassword] = useState('');
   const [active, setActive] = useState(false);
@@ -38,7 +38,7 @@ const Password = () => {
           }`}
           htmlFor="password"
         >
-          Password
+          {placeholder}
         </label>
         <label
           onClick={handleClick}

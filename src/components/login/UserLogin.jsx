@@ -11,10 +11,10 @@ const UserLogin = () => {
                 <div className="flex flex-col w-full m-auto">
                         <span className='mx-auto text-3xl mt-2'>Sign In</span>
                         <FormInput placeholder={"Email"} type={"text"} />
-                        <Password />
+                        <Password placeholder={"Password"} />
                         <button className='w-[76%] md:w-[70%] hover:bg-orange-500 font-medium hover:font-bold rounded mx-auto'>Sign In</button>
                         <span className='w-[76%] md:w-70% mx-auto text-center my-2'><Link>forgot password?</Link></span>
-                        <span className='w-[76%] md:w-70% mx-auto text-center'>Not a member?<Link className='text-orange-400 hover:text-orange-500 mx-1 hover:font-semibold'>Sign Up</Link></span>
+                        <span className='w-[76%] md:w-70% mx-auto text-center'>Not a member?<Link to="/churchproject/signup" className='text-orange-400 hover:text-orange-500 mx-1 hover:font-semibold'>Sign Up</Link></span>
                 </div>
                
             </form>
