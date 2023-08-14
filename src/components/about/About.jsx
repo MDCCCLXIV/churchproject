@@ -14,7 +14,7 @@ const About = () => {
         <div className='block md:flex w-full h-full md:h-full md:mx-auto md:max-w-6xl'>
           <div className='flex w-full flex-col md:w-[35%] m-auto h-[30%]'>
             <span className='text-2xl font-bold text-center'>Welcome to Gethsemane</span>
-            <p className='md:text-lg text-center'>
+            <p className='md:text-lg  text-center'>
               We welcome you with great joy to Gethsemane life Church. We are here to share the great news of Jesus
               Christ to all that will listen. Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis illo est
               nulla, beatae deserunt quis!
