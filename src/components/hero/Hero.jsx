@@ -25,7 +25,7 @@ const Hero = () => {
         <div className='flex flex-col h-full w-full justify-between'>
           <div className='flex flex-col w-full m-auto justify-center text-center items-center md:my-auto h-[70%]'>
             <div className="flex flex-col md:w-[70%]">
-              <span className='text-5xl md:text-7xl font-medium my-2 duration-500   md:rounded md:p-2 '>{currentImage.description}</span>
+              <span className='text-5xl md:text-7xl font-light  my-2 duration-500   md:rounded md:p-2 '>{currentImage.description}</span>
             </div>
             <button className='w-[250px] my-2 font-medium text-white'>view location & service times</button>
           </div>

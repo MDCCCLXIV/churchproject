@@ -1,4 +1,5 @@
 import React from 'react'
+import Carousel from '../../features/carousel/Carousel'
 
 const Welfare = () => {
   return (
@@ -9,7 +10,7 @@ const Welfare = () => {
                     <div className="flex flex-col h-full md:h-[60%] md:m-auto md:justify-between">
                         <div className="flex flex-col h-[85%]  text-center md:h-full md:text-start">
                             <span className='uppercase text-xl font-medium md:text-2xl'> the Gethsemane life church welfare Association</span>
-                    <p>The Gethsemane Life Church Welfare Association is a vibrant and compassionate community
+                    <p className='text-sm md:text-base w-full'>The Gethsemane Life Church Welfare Association is a vibrant and compassionate community
                          dedicated to fostering positive change and upliftment. Through a strong spirit of unity
                           and care, we embrace diverse initiatives to improve lives and create lasting impact. Our
                            mission is to extend a helping hand to those in need, guided by the values of empathy,
@@ -23,9 +24,9 @@ const Welfare = () => {
                     </div>
                  
                 </div>
-                <div className="flex w-full md:w-[50%] md:h-full h-[50%] p-2">
-                    <div className="flex h-[62%] w-full m-auto rounded bg-cover bg-no-repeat bg-center" style={{ backgroundImage: `url(${import.meta.env.BASE_URL}/assets/images/church1.avif)` }}>
-
+                <div className="flex w-full md:w-[50%] md:h-full rounded-xl h-[50%] p-2">
+                    <div className="flex h-[62%] w-full m-auto rounded-xl bg-cover bg-no-repeat bg-center" style={{ backgroundImage: `url(${import.meta.env.BASE_URL}/assets/images/church1.avif)` }}>
+                     <Carousel />
                     </div>
                 </div>
             </div>

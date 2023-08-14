@@ -1,69 +1,42 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { AiOutlineStar } from 'react-icons/ai';
 
-const Carousel = ({ onIndexChange }) => {
-  const images = ['church4.avif', 'church1.avif', 'church2.avif', 'church3.avif'];
-  const [index, setIndex] = useState(0);
-  const timeoutRef = useRef(null);
+const Carousel = () => {
+  const images = ['/assets/images/church4.avif', '/assets/images/church1.avif', '/assets/images/church2.avif', '/assets/images/church3.avif'];
+ 
 
-  const resetTimeout = () => {
-    if (timeoutRef.current) {
-      clearTimeout(timeoutRef.current);
-    }
-  };
+  const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
-    resetTimeout();
-    timeoutRef.current = setTimeout(() => {
-      setIndex((prevIndex) => (prevIndex === images.length - 1 ? 0 : prevIndex + 1));
-    }, 3500); // Normal delay for transitioning to the next image
+    const interval = setInterval(() => {
+      setActiveIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 7000); // Change image every 5 seconds
 
     return () => {
-      resetTimeout();
+      clearInterval(interval);
     };
-  }, [index, images.length]);
+  }, []);
 
-  useEffect(() => {
-    // Call the onIndexChange function with the current index whenever it changes
-    onIndexChange(index);
-  }, [index, onIndexChange]);
-
-  const Indicators = () => (
-    <div className="absolute bottom-0 left-0 w-full flex justify-center mb-1">
-      {images.map((_, i) => (
-        <span
-          key={i}
-          onClick={() => setIndex(i)}
-          className={`w-2 h-2 rounded-full mx-2 indicators ${
-            i === index ? 'bg-red-500' : 'bg-white'
-          }`}
-        />
-      ))}
-    </div>
-  );
+  const currentImage = images[activeIndex];
 
   return (
-    <div className="relative flex overflow-x-hidden h-full md:w-[50%] m-auto">
-      <div className="flex w-[250px] md:w-[300px] h-full md:justify-items-center transition-transform duration-500 ease-in-out" style={{ transform: `translateX(-${index * 100}%)` }}>
-        {images.map((image, i) => (
-          <div
-            key={i}
-            className="flex-none w-full h-full md:mx-1 bg-cover bg-no-repeat bg-center rounded-md"
-            style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/${image})` }}
-          >
-            <div className="flex flex-col w-full h-full rounded-md ">
-              <div className="flex justify-between">
-                <span className="text-red-500 flex">
-                  <AiOutlineStar className="" size={20} />
-                  <AiOutlineStar size={20} />
-                  <AiOutlineStar size={20} />
-                </span>
-              </div>
+<div className='flex flex-col rounded-xl items-center justify-center w-full h-full duration-700 ease-in-out text-white bg-cover bg-center bg-no-repeat' style={{ backgroundImage: `url(${import.meta.env.BASE_URL}${currentImage})` }}>
+        <div className='flex flex-col h-full w-full rounded-xl justify-between' style={{ background: `linear-gradient(rgba(255, 255, 255, 0.1), rgba(0,0,0,1))` }}>
+            <div className="flex justify-center mt-auto py-2 mx-auto">
+              {images.map((image,index) => (
+                images.length > 1 && <div
+                  key={index}
+                  className={`w-2 h-2 mx-2 rounded-full mt-auto cursor-pointer ${
+                    index === activeIndex ? 'bg-red-500' : 'bg-white'
+                  }`}
+                  onClick={() => setActiveIndex(index)}
+                ></div>
+              ))}
             </div>
           </div>
-        ))}
-      </div>
-      <Indicators />
+
+        
+        
+      
     </div>
   );
 };
