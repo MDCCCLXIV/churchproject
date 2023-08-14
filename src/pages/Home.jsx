@@ -7,6 +7,7 @@ import Connections from '../components/connections/Connections'
 import About from '../components/about/About'
 // import Newsletter from './components/newsletter/Newsletter';
 import Newsletter from '../components/newsletter/Newsletter'
+import Welfare from '../components/welfare/Welfare'
 // import Menu from '../components/menu/Menu'
 
 const Home = () => {
@@ -17,6 +18,7 @@ const Home = () => {
       <Services />
       <MoreVideos />
       <Connections />
+      <Welfare />
       <Newsletter />
 
     

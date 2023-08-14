@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 
 const Menu = () => {
@@ -9,8 +10,11 @@ const Menu = () => {
         <div className="flex flex-col h-[60%]  md:my-auto md:h-full  md:w-[60%] border-b- md:border-b-0 md:border-e w-full  ">
         <div className='  text-2xl h-full md:text-3xl md:m-0 md:p-2 text-left md:mt-[10%] md:h-full w-full '>
           <div className='flex flex-col hover:border-s-2 justify-center font-semibold hover:cursor-pointer hover:border-orange-400 h-[20%] md:h-[15%] md:m-3 p-1'>
-            <span>HOME</span>
+            <Link to="/" className='flex flex-col'>
+              <span>HOME</span>
             <span className='text-sm'>description</span>
+            </Link>
+          
             </div>
           <div className='flex flex-col hover:border-s-2  justify-center font-semibold hover:cursor-pointer hover:border-orange-400 h-[20%] md:h-[15%] md:m-3 p-1'>
             <span>ABOUT US</span>

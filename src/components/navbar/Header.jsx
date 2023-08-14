@@ -36,7 +36,7 @@ const Header = () => {
         element.current.contains(e.target) ? 
         openMenu()
         :
-        !openElement.current.contains(e.target) && closeMenu()
+        closeMenu()
     }
      const backgroundImageUrl = `${import.meta.env.BASE_URL}/assets/images/church1.avif`;
 

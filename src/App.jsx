@@ -9,12 +9,12 @@ import SignUp from './pages/SignUp';
 
 function App() {
   return (
-    <div className='bg-gray-100 tracking-normal'>
+    <div className='bg-slate-100 tracking-normal'>
       <Router>
         <Header />
         <Routes>
           <Route path='/' element={<Home  />} />
-          <Route path='/menu' element={<Menu  />} />
+          <Route path='/churchproject/menu' element={<Menu  />} />
           <Route path='/churchproject/login' element={<Login  />} />
           <Route path='/churchproject/signup' element={<SignUp  />} />
           <Route path='*' element={<Home />} />

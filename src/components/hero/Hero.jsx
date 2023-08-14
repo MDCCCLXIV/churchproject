@@ -2,10 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 const Hero = () => {
  const images = [
-  { image: '/assets/images/church4.avif', description: "But I'm here to help with a solution that is not only easy, it's free" },
-  { image: '/assets/images/church1.avif', description: "For God gave us a spirit not of fear but of power and love and self-control." },
-  { image: '/assets/images/church2.avif', description: "Be watchful, stand firm in the faith, act like men, be strong." },
-  { image: '/assets/images/church3.avif', description: "Wait for the Lord; be strong, and let your heart take courage; wait for the Lord!" }
+  { image: '/assets/images/church1.avif', description: "Keeping Watch With Christ" },
 ];
 
   const [activeIndex, setActiveIndex] = useState(0);
@@ -27,9 +24,8 @@ const Hero = () => {
       <div className="flex flex-col md:mx-auto md:max-w-6xl w-full h-full justify-between items-center md:mt-[4%] md:mb-3">
         <div className='flex flex-col h-full w-full justify-between'>
           <div className='flex flex-col w-full m-auto justify-center text-center items-center md:my-auto h-[70%]'>
-            <div className="flex flex-col md:w-[50%]">
-              <span className='text-4xl font-medium my-2 duration-500  md:bg-black/40 md:rounded md:p-2 '>{currentImage.description}</span>
-              <span className='text-base my-2'><i>...Jesus said,"stay here and keep watch with me" ~matthew 26:38b</i></span>
+            <div className="flex flex-col md:w-[70%]">
+              <span className='text-5xl md:text-7xl font-medium my-2 duration-500   md:rounded md:p-2 '>{currentImage.description}</span>
             </div>
             <button className='w-[250px] my-2 font-medium text-white'>view location & service times</button>
           </div>
@@ -38,9 +34,9 @@ const Hero = () => {
           <div className="flex p-2 h-[60%] md:h-full w-full mx-auto rounded m-2 ">
             <div className="flex justify-center mx-auto">
               {images.map((image, index) => (
-                <div
+                images.length > 1 && <div
                   key={index}
-                  className={`w-3 h-3 mx-2 rounded-full cursor-pointer ${
+                  className={`w-3 h-3 mx-2 rounded-full mt-auto cursor-pointer ${
                     index === activeIndex ? 'bg-white' : 'bg-gray-500'
                   }`}
                   onClick={() => setActiveIndex(index)}

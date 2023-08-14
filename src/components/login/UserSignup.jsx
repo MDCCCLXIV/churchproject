@@ -17,8 +17,7 @@ const UserSignup = () => {
                         <Password placeholder={"Password"}/>
                         <Password placeholder={"Confirm Password"}/>
                         <button className='w-[76%] md:w-[70%] hover:bg-orange-500 font-semibold hover:font-bold rounded mx-auto'>CREATE</button>
-                        <span className='w-[76%] md:w-70% mx-auto text-center my-2'><Link>forgot password?</Link></span>
-                        <span className='w-[76%] md:w-70% mx-auto text-center'>Have an Account?<Link to="/churchproject/login" className='text-orange-400 hover:text-orange-500 mx-1 hover:font-semibold'>Sign In</Link></span>
+                        <span className='w-[76%] md:w-70% mx-auto mt-2 text-center'>Have an Account?<Link to="/churchproject/login" className='text-orange-400 hover:text-orange-500 mx-1 hover:font-semibold'>Sign In</Link></span>
                 </div>
                
             </form>

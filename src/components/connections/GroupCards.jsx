@@ -28,7 +28,7 @@ const GroupCards = () => {
               </div>
               <div className='flex w-full h-[30%] flex-col text-sm p-1 my-1'>
                 <span className='w-full text-base font-bold'>{connect.Title}</span>
-                <p className='text-sm mt-1 w-[100%] md:w-[345px]'>
+                <p className='text-sm mt-1 w-[100%] md:w-[335px]'>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis quae magnam, corporis rem quos mollitia.
                 </p>
               </div>
