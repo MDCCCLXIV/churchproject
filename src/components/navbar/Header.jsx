@@ -1,73 +1,51 @@
-import React, { useState,useEffect,useRef } from 'react';
-import { AiOutlinePlayCircle, AiOutlineSearch, AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
-import { RiAccountCircleLine } from 'react-icons/ri';
-import { LiaDonateSolid } from 'react-icons/lia';
-import Menu from '../menu/Menu';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect, useRef } from "react";
+import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
+import { RiAccountCircleLine } from "react-icons/ri";
+import UserLogin from "../login/UserLogin";
 
 const Header = () => {
   const [hamburger, setHamburger] = useState(true);
+  const [userAccess, setUserAccess] = useState(false);
+  const [menu, setMenu] = useState(false);
+
+  function handleMenuClick() {
+    setMenu(!menu);
+  }
+
+  function handleUserclick() {
+    setUserAccess(!userAccess);
+  }
 
   function openMenu() {
     setHamburger(!hamburger);
   }
-   const closeMenu=()=>{
-        setHamburger(true)
-    }
+
+  const userAccessRef = useRef();
 
   useEffect(() => {
-    document.body.style.overflowY = hamburger ? 'auto' : 'hidden';
-  }, [hamburger]);
+    document.addEventListener("click", handleDocumentClick, true);
 
-    
+    return () => {
+      document.removeEventListener("click", handleDocumentClick, true);
+    };
+  }, [userAccess]);
 
-    const element = useRef()
-    const openElement = useRef()
-
-   useEffect(() => {
-  document.addEventListener("click", handleclick, true);
-
-  return () => {
-    document.removeEventListener("click", handleclick, true);
-  };
-}, [hamburger]);
-
-    const handleclick = (e)=>{
-        element.current.contains(e.target) ? 
-        openMenu()
-        :
-        closeMenu()
+  const handleDocumentClick = (e) => {
+    if (userAccessRef.current && !userAccessRef.current.contains(e.target)) {
+      handleUserclick();
+      console.log("clicked");
     }
-     const backgroundImageUrl = `${import.meta.env.BASE_URL}/assets/images/church1.avif`;
+  };
 
   return (
-    <div className="flex flex-col w-full">
-      <div className="flex fixed top-0 left-0 w-full z-50   bg-black/50 backdrop-blur-sm p-1 md:p-3 text-white text-sm">
+    <div className="flex flex-col w-full items-center  md:mb-[4%]">
+      <div className="flex fixed p-4 mx-auto w-full z-50 bg-white   backdrop-blur-sm md:p-3 text-black shadow-lg text-sm">
         <div className="w-full flex mx-auto max-w-6xl justify-between">
           <div className="flex">
-            <section className="flex m-1 hover:cursor-pointer hover:text-purple-800 ease-in-out">
-              <AiOutlinePlayCircle size={25} />
-              <span className="hidden md:flex m-auto mx-1">watch</span>
-            </section>
-            <section className="flex m-1 hover:cursor-pointer hover:text-purple-800 ease-in-out">
-              <AiOutlineSearch size={25} />
-              <span className="hidden md:flex m-auto mx-1">search</span>
-            </section>
-          </div>
-          <div className="flex">
-            <span className="text-lg font-normal font-mono my-auto m-1 hidden md:flex">GETHSEMANE LIFE CHURCH</span>
-            <span className="text-xl font-normal font-mono my-auto m-1 md:hidden">GLC</span>
-          </div>
-          <div className="flex">
-            <Link to="/churchproject/login" className="flex m-1  hover:cursor-pointer hover:text-purple-800 ease-in-out">
-              <RiAccountCircleLine size={25} />
-              <span className="hidden md:flex m-auto mx-1">Account</span>
-            </Link>
-            <section className="flex m-1  hover:cursor-pointer hover:text-purple-800 ease-in-out">
-              <LiaDonateSolid size={25} />
-              <span className="hidden md:flex m-auto mx-1">Give</span>
-            </section>
-            <section ref={element} className="flex m-1  hover:cursor-pointer hover:text-purple-800 ease-in-out">
+            <section
+              onClick={openMenu}
+              className="flex m-1  hover:cursor-pointer hover:text-purple-800 ease-in-out"
+            >
               {hamburger ? (
                 <AiOutlineMenu className="md:flex my-auto m-1" size={25} />
               ) : (
@@ -75,12 +53,27 @@ const Header = () => {
               )}
             </section>
           </div>
+          <div className="flex w-[60%] m-auto">
+            <span className="text-lg font-normal font-mono m-auto flex">
+              Gethsemane Life Church
+            </span>
+          </div>
+          <div className="flex">
+            <span
+              onClick={handleUserclick}
+              className="flex m-1  hover:cursor-pointer hover:text-purple-800 ease-in-out"
+            >
+              <RiAccountCircleLine size={25} />
+              <span className="hidden md:flex m-auto mx-1">Account</span>
+            </span>
+          </div>
         </div>
       </div>
-     <div ref={openElement} className="w-full h-screen pt-9 ease-in-out duration-700 bg-cover bg-no-repeat bg-center z-40 fixed" style={{ display: !hamburger ? "block" : "none", backgroundImage: `url(${backgroundImageUrl})` }}>
-        <Menu />
-      </div>
-      
+      {userAccess && (
+        <div className="w-full h-screen z-50 md:h-[100vh] bg-black/70 backdrop-blur-lg justify-center fixed ">
+          <UserLogin ref={userAccessRef} />
+        </div>
+      )}
     </div>
   );
 };
