@@ -8,7 +8,7 @@ const Header = () => {
   const [userAccess, setUserAccess] = useState(false);
   const [menu, setMenu] = useState(false);
 
-  function handleMenuClick() {
+  function handleHamburgerClick() {
     setMenu(!menu);
   }
 
@@ -21,14 +21,19 @@ const Header = () => {
   }
 
   const userAccessRef = useRef();
+  const humburgerRef = useRef();
 
   useEffect(() => {
     document.addEventListener("click", handleDocumentClick, true);
+    document.addEventListener("click", handleMenuClick, true);
+
 
     return () => {
       document.removeEventListener("click", handleDocumentClick, true);
+      document.removeEventListener("click", handleMenuClick, true);
+
     };
-  }, [userAccess]);
+  }, [userAccess,hamburger]);
 
   const handleDocumentClick = (e) => {
     if (userAccessRef.current && !userAccessRef.current.contains(e.target)) {
@@ -36,7 +41,12 @@ const Header = () => {
       console.log("clicked");
     }
   };
-
+  function handleMenuClick() {
+    if (humburgerRef.current && !humburgerRef.current.contains(e.target)) {
+      handleHamburgerClick()
+      console.log("clicked");
+    }
+  }
   return (
     <div className="flex flex-col w-full items-center  md:mb-[4%]">
       <div className="flex fixed p-4 mx-auto w-full z-50 bg-white   backdrop-blur-sm md:p-3 text-black shadow-lg text-sm">
@@ -54,8 +64,11 @@ const Header = () => {
             </section>
           </div>
           <div className="flex w-[60%] m-auto">
-            <span className="text-lg font-normal font-mono m-auto flex">
+            <span className="hidden text-lg font-normal font-mono m-auto md:flex">
               Gethsemane Life Church
+            </span>
+            <span className="flex text-lg font-normal font-mono m-auto md:hidden">
+              GLC
             </span>
           </div>
           <div className="flex">
@@ -74,8 +87,22 @@ const Header = () => {
           <UserLogin ref={userAccessRef} />
         </div>
       )}
+    {hamburger ? 
+    <div className="fixed top-0 left-[-100%] h-full w-full bg-black text-white transform -transition-transform duration-700 ease-in-out">
+      <div className="h-full flex items-center justify-center">
+        Hello world
+      </div>
+    </div>
+    :
+    <div className="fixed top-0 left-0 h-full w-full bg-orange-400 text-white transform -transition-transform duration-1000 ease-in-out">
+      <div className="h-full flex items-center justify-center">
+        Hello world
+      </div>
+    </div>
+  }
     </div>
   );
 };
 
 export default Header;
+// Gethsemane
