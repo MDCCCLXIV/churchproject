@@ -10,6 +10,7 @@ const Header = () => {
 
   function handleHamburgerClick() {
     setMenu(!menu);
+ 
   }
 
   function handleUserclick() {
@@ -24,6 +25,7 @@ const Header = () => {
   const humburgerRef = useRef();
 
   useEffect(() => {
+    document.body.style.overflowY = hamburger ? 'auto' : 'hidden';
     document.addEventListener("click", handleDocumentClick, true);
     document.addEventListener("click", handleMenuClick, true);
 
@@ -88,13 +90,13 @@ const Header = () => {
         </div>
       )}
     {hamburger ? 
-    <div className="fixed top-0 left-[-100%] h-full w-full bg-black text-white transform -transition-transform duration-700 ease-in-out">
+    <div className="fixed top-0 left-[-100%] h-full w-full bg-black text-white transform -transition-transform duration-700 ease-in-out ">
       <div className="h-full flex items-center justify-center">
         Hello world
       </div>
     </div>
     :
-    <div className="fixed top-0 left-0 h-full w-full bg-orange-400 text-white transform -transition-transform duration-1000 ease-in-out">
+    <div className="fixed top-0 left-0 z-40 h-full w-full bg-orange-400 text-white transform -transition-transform duration-1000 ease-in-out">
       <div className="h-full flex items-center justify-center">
         Hello world
       </div>
