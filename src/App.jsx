@@ -7,7 +7,7 @@ import Footer from './components/footer/Footer';
 
 function App() {
   return (
-    <div className='bg-[#FFFFFF]'>
+    <div className='bg-[#f5f5fa]'>
       <Router>
         <Header />
         <Routes>

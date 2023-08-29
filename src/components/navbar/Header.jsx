@@ -51,17 +51,17 @@ const Header = () => {
   }
   return (
     <div className="flex flex-col w-full items-center  md:mb-[4%]">
-      <div className="flex fixed p-4 mx-auto w-full z-50 bg-white   backdrop-blur-sm md:p-3 text-black shadow-lg text-sm">
+      <div className="flex fixed mx-auto w-full z-50 bg-white   backdrop-blur-sm md:p-3 text-black shadow-lg text-sm">
         <div className="w-full flex mx-auto max-w-6xl justify-between">
           <div className="flex">
             <section
               onClick={openMenu}
-              className="flex m-1  hover:cursor-pointer hover:text-purple-800 ease-in-out"
+              className="flex m-1  hover:cursor-pointer hover:text-purple-800 duration-700 ease-in-out"
             >
               {hamburger ? (
-                <AiOutlineMenu className="md:flex my-auto m-1" size={25} />
+                <AiOutlineMenu className="md:flex my-auto m-1 duration-700 " size={25} />
               ) : (
-                <AiOutlineClose className="md:flex my-auto m-1" size={25} />
+                <AiOutlineClose className="md:flex my-auto m-1 duration-700" size={25} />
               )}
             </section>
           </div>
