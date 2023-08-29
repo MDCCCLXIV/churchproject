@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
-import { RiAccountCircleLine } from "react-icons/ri";
+import { BiUser } from "react-icons/bi";
 import UserLogin from "../login/UserLogin";
 
 const Header = () => {
@@ -51,7 +51,7 @@ const Header = () => {
   }
   return (
     <div className="flex flex-col w-full items-center  md:mb-[4%]">
-      <div className="flex fixed mx-auto w-full z-50 bg-white   backdrop-blur-sm md:p-3 text-black shadow-lg text-sm">
+      <div className="flex fixed p-2 mx-auto w-full z-50 bg-white   backdrop-blur-sm md:p-3 text-black shadow-lg text-sm">
         <div className="w-full flex mx-auto max-w-6xl justify-between">
           <div className="flex">
             <section
@@ -78,7 +78,7 @@ const Header = () => {
               onClick={handleUserclick}
               className="flex m-1  hover:cursor-pointer hover:text-purple-800 ease-in-out"
             >
-              <RiAccountCircleLine size={25} />
+              <BiUser size={25} />
               <span className="hidden md:flex m-auto mx-1">Account</span>
             </span>
           </div>
