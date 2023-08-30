@@ -3,6 +3,7 @@ import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { BiUser } from "react-icons/bi";
 import { LiaPlayCircle,LiaDonateSolid } from "react-icons/lia";
 import UserLogin from "../login/UserLogin";
+import Menu from "../menu/Menu";
 
 const Header = () => {
   const [hamburger, setHamburger] = useState(true);
@@ -116,8 +117,8 @@ const Header = () => {
         </div>
       ) : (
         <div className="fixed top-0 left-0 z-40 h-full w-full bg-orange-400/50 text-white transform -transition-transform duration-1000 ease-in-out">
-          <div className="h-full flex items-center justify-center">
-            Hello world
+          <div className="h-full flex items-center justify-start">
+            <Menu/>
           </div>
         </div>
       )}

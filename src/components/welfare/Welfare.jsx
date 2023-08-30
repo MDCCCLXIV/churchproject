@@ -3,7 +3,7 @@ import Carousel from '../../features/carousel/Carousel'
 
 const Welfare = () => {
   return (
- <div className='flex flex-col  w-full h-[90vh] md:h-[75vh]  p-2'>
+ <div className='flex flex-col  w-full h-[90vh] md:h-[65vh]  p-2'>
          <div className="flex flex-col w-full h-full md:mx-auto md:max-w-6xl">
             <div className="block md:flex h-[100%] justify-between p-2">
                 <div className="flex flex-col w-full md:w-[49%] h-[50%] md:h-full">
