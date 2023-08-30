@@ -24,8 +24,13 @@ const Header = () => {
   const userAccessRef = useRef();
   const humburgerRef = useRef();
 
-  useEffect(() => {
+  useEffect(()=>{
     document.body.style.overflowY = hamburger ? "auto" : "hidden";
+
+  },[hamburger])
+
+  useEffect(() => {
+    document.body.style.overflowY = !userAccess ? "auto" : "hidden";
     document.body.style.overflowY = !userAccess ? "auto" : "hidden";
     document.addEventListener("click", handleDocumentClick, true);
     document.addEventListener("click", handleMenuClick, true);
@@ -34,7 +39,7 @@ const Header = () => {
       document.removeEventListener("click", handleDocumentClick, true);
       document.removeEventListener("click", handleMenuClick, true);
     };
-  }, [userAccess, hamburger]);
+  }, [userAccess]);
 
   const handleDocumentClick = (e) => {
     if (userAccessRef.current && !userAccessRef.current.contains(e.target)) {
@@ -42,7 +47,7 @@ const Header = () => {
       console.log("clicked");
     }
   };
-  function handleMenuClick() {
+  function handleMenuClick(e) {
     if (humburgerRef.current && !humburgerRef.current.contains(e.target)) {
       handleHamburgerClick();
       console.log("clicked");
