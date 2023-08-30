@@ -110,9 +110,9 @@ const Header = () => {
         </div>
       )}
       {hamburger ? (
-        <div className="fixed top-0 left-[-100%] h-full w-full bg-black text-white transform -transition-transform duration-700 ease-in-out ">
-          <div className="h-full flex items-center justify-center">
-            Hello world
+        <div className="fixed top-0 left-[-100%] h-full w-full bg-black text-white transform -transition-transform duration-1000 ease-in-out ">
+          <div className="h-full flex items-center justify-center transform -transition-transform duration-1000 ease-in-out ">
+          {/* <Menu/> */}
           </div>
         </div>
       ) : (
