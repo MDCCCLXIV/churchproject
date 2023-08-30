@@ -55,12 +55,12 @@ const Header = () => {
   }
   return (
     <div className="flex flex-col w-full items-center  ">
-      <div className="flex fixed p-2 mx-auto w-full z-50 bg-white   backdrop-blur-sm md:p-3 text-black shadow-lg text-sm">
+      <div className="flex fixed p-2 mx-auto w-full z-50 bg-white  backdrop-blur-sm md:p-3 text-black shadow-lg text-sm">
         <div className="w-full flex mx-auto max-w-6xl justify-between">
           <div className="flex">
             <section
               onClick={openMenu}
-              className="flex m-1  hover:cursor-pointer hover:text-purple-800 duration-700 ease-in-out"
+              className="flex m-1  hover:cursor-pointer hover:text-orange-400 duration-700 ease-in-out"
             >
               {hamburger ? (
                 <AiOutlineMenu
@@ -74,7 +74,7 @@ const Header = () => {
                 />
               )}
             </section>
-            <section  className="flex m-1  hover:cursor-pointer hover:text-purple-800">
+            <section  className="flex m-1  hover:cursor-pointer hover:text-orange-400">
               <LiaPlayCircle  className="md:flex my-auto m-1" size={28} />
             </section>
           </div>
@@ -88,13 +88,13 @@ const Header = () => {
           </div>
           <div className="flex">
           <div
-             className="flex m-1  hover:cursor-pointer hover:text-purple-800 ease-in-out">
+             className="flex m-1  hover:cursor-pointer hover:text-orange-400 ease-in-out">
               <LiaDonateSolid size={25}/>
               <span className="hidden md:flex m-auto mx-1">Give</span>
             </div>
             <div
               onClick={handleUserclick}
-              className="flex m-1  hover:cursor-pointer hover:text-purple-800 ease-in-out"
+              className="flex m-1  hover:cursor-pointer hover:text-orange-400 ease-in-out"
             >
               <BiUser size={25} />
               <span className="hidden md:flex my-auto mx-1">Account</span>
@@ -115,7 +115,7 @@ const Header = () => {
           </div>
         </div>
       ) : (
-        <div className="fixed top-0 left-0 z-40 h-full w-full bg-orange-400 text-white transform -transition-transform duration-1000 ease-in-out">
+        <div className="fixed top-0 left-0 z-40 h-full w-full bg-orange-400/50 text-white transform -transition-transform duration-1000 ease-in-out">
           <div className="h-full flex items-center justify-center">
             Hello world
           </div>

@@ -16,7 +16,7 @@ const UserLogin = forwardRef((props,ref) => {
    <div  className='w-full h-screen lg:h-[100vh] pt-4'>
          {!signActive ? 
          <div className="flex flex-col w-full  h-[100%] m-auto lg:max-w-6xl">
-            <form ref={ref} className="flex flex-col h-[40%] lg:h-[35%] w-[90%] md:w-[45%] lg:w-[30%]  shadow-lg p-1 justify-items-center items-center m-auto rounded bg-white">
+            <form ref={ref} className="flex flex-col h-[40%] lg:h-[35%] w-[87%] md:w-[45%] lg:w-[30%]  shadow-lg p-1 justify-items-center items-center m-auto rounded bg-white">
                 <div className="flex flex-col w-full m-auto">
                         <span className='mx-auto text-3xl mt-2'>Sign In</span>
                         <FormInput placeholder={"Email"} type={"text"} />

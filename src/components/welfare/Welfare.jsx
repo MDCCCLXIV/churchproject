@@ -17,8 +17,8 @@ const Welfare = () => {
                         generosity, and a shared commitment to building a better world.</p>
                         </div>
                         <div className="flex justify-between md:justify-normal p-1 md:py-2 w-full h-[15%]">
-                            <button className=' md:me-2 w-[45%] md:w-[30%] bg-purple-600 mt-auto mb-2 rounded-md'>Explore</button>
-                            <button className=' md:ms-2 w-[45%] md:w-[30%] bg-purple-600 mt-auto mb-2 rounded-md'>JOIN</button>
+                            <button className=' md:me-2 w-[45%] md:w-[30%] bg-orange-400 mt-auto mb-2 rounded-md'>Explore</button>
+                            <button className=' md:ms-2 w-[45%] md:w-[30%] bg-orange-400 mt-auto mb-2 rounded-md'>JOIN</button>
                         </div>
                          
                     </div>

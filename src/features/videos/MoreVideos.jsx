@@ -14,7 +14,7 @@ const MoreVideos = () => {
     <div className='w-full h-[25vh] flex flex-col py-2'>
       <div className='flex relative w-full max-w-6xl m-auto h-full'>
         <span className='absolute font-medium text-base transform -translate-y-1/2 left-2 top-0 px-1'>Sermons</span>
-        <a href='#' className='absolute font-medium text-purple-600 transform -translate-y-1/2 right-2 pe-2 top-0 hover:cursor-pointer text-base'>view all</a>
+        <a href='#' className='absolute font-medium text-orange-400 transform -translate-y-1/2 right-2 pe-2 top-0 hover:cursor-pointer text-base'>view all</a>
         <div className='flex w-full h-full overflow-x-scroll no-scrollbar'>
           {messages.map((message, index) => (
             <div key={index} className='flex flex-col flex-shrink-0 w-[200px] md:w-[270px] h-[80%] p-1 m-2 rounded shadow-md mt-5 bg-white'>

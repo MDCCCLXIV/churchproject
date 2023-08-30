@@ -7,7 +7,7 @@ import Footer from './components/footer/Footer';
 
 function App() {
   return (
-    <div className='bg-[#f5f5fa]'>
+    <div className='bg-slate-50'>
       <Router>
         <Header />
         <Routes>

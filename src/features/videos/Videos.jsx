@@ -25,9 +25,9 @@ const Videos = () => {
             laborum quaerat explicabo sit.
             </span>
             </div>
-            <a className='flex text-sm hover:cursor-pointer hover:text-purple-600 '><RiQuestionnaireLine size={25}/><i className='mx-1'>A few questions to help you process, journal or discuss the themes of this message...</i></a>
+            <a className='flex text-sm hover:cursor-pointer hover:text-orange-400 '><RiQuestionnaireLine size={25}/><i className='mx-1'>A few questions to help you process, journal or discuss the themes of this message...</i></a>
           </div>
-          <button className='w-[50%] md:w-[20%] bg-purple-600 mt-auto mb-2 rounded-full'>View more</button>
+          <button className='w-[50%] md:w-[20%] bg-orange-400 mt-auto mb-2 rounded-full'>View more</button>
         </div>
       </div>
     </div>
