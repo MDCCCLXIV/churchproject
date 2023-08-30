@@ -2,7 +2,7 @@ import React from 'react'
 
 const Newsletter = () => {
   return (
-    <div className='w-full h-[28vh]  text-white text-center'>
+    <div className='w-full h-[35vh]  text-white text-center'>
         <div className="flex container w-full h-full  mx-auto max-w-6xl p-2 md:p-0 ">
             <div className="rounded w-full h-[80%] m-auto bg-orange-400 justify-center">
                 <div className="flex flex-col container  w-full h-full  m-auto max-w-3xl ">

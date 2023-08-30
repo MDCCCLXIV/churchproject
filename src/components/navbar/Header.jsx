@@ -5,7 +5,9 @@ import { LiaPlayCircle, LiaDonateSolid } from "react-icons/lia";
 import UserLogin from "../login/UserLogin";
 import Menu from "../menu/Menu";
 
-const Header = () => {
+const Header = ({timeline,ease}) => {
+
+ 
   const [hamburger, setHamburger] = useState(true);
   const [userAccess, setUserAccess] = useState(false);
   const [menu, setMenu] = useState(false);
@@ -31,6 +33,7 @@ const Header = () => {
   const userAccessRef = useRef();
   const humburgerRef = useRef();
 
+
   useEffect(() => {
     document.body.style.overflowY = hamburger ? "auto" : "hidden";
     document.addEventListener("click", handleMenuClick, true);
@@ -39,6 +42,10 @@ const Header = () => {
       document.removeEventListener("click", handleMenuClick, true);
     };
   }, [hamburger]);
+  useEffect(() => {
+    document.body.style.overflowY = give ? "auto" : "hidden";
+
+  }, [give]);
 
   useEffect(() => {
     document.body.style.overflowY = !userAccess ? "auto" : "hidden";
