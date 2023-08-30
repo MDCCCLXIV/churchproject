@@ -40,8 +40,8 @@ const Footer = () => {
                   </ul>
                 </div>
               </div>
-              <div className='h-[55%] md:h-full w-full py-1 md:py-3  '>
-                <span className='font-bold text-sm md:text-base md:pt-2 text-orange-400'>Quick links</span>
+              <div className='h-[55%] md:h-full w-full py-1 md:mt-0 mt-3 md:py-3  '>
+                <span className='font-bold text-sm md:text-base  md:pt-2 text-orange-400'>Quick links</span>
                 <ul className=' px-1'>
                   <li className='m-0.5 mt-0.5'><a className='hover:font-bold text-base' href='#'>Home</a></li>
                   <li className='m-0.5 mt-0.5'><a className='hover:font-bold text-base' href='#'>About us</a></li>
