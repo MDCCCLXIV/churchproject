@@ -18,7 +18,7 @@ const GroupCards = () => {
               key={index}
               className='flex flex-col flex-shrink-0 w-[75%] md:w-[300px]  h-[80%] mx-2 rounded-md bg-cover bg-center bg-no-repeat' style={{ backgroundImage: `url(${import.meta.env.BASE_URL}${connect.image})` }}
             >
-              <div className='flex flex-col h-full w-full rounded-md ' style={{ background: `linear-gradient(rgba(255, 255, 255, 0), rgba(0,0,0,0.6))` }}>
+              <div className='flex flex-col h-full w-full rounded-md ' style={{ background: `linear-gradient(rgba(255, 255, 255, 0), rgba(0,0,0,0.9))` }}>
                 <div className='w-full h-[25%] p-2 mt-auto hover:cursor-pointer'>
                   <span className='text-orange-400 flex font-bold'>{connect.Title}</span>
                   <span className='text-white text-2xl font-light flex'>{connect.Title}</span>
