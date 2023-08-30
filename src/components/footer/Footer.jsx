@@ -11,18 +11,18 @@ const Footer = () => {
           <div className='block md:flex h-[90%] md:h-[80%] border-b-2 border-orange-400'>
             <div className='flex flex-col w-full md:w-[37%] md:h-[75%] '>
               <div className='flex flex-col'>
-                <span className='flex font-bold text-left w-full py-3 text-lg text-orange-400'>Gethsemane Life church</span>
-                <p className='flex text-sm md:text-lg md:my-2'>
+                <span className='flex font-bold text-left w-full py-3 text-base text-orange-400'>Gethsemane Life church</span>
+                <p className='flex text-sm md:text-base md:my-2'>
                   For the word of God is living and active. Sharper than any double-edged sword, it penetrates even to dividing soul and spirit, joints and marrow; it judges the thoughts and attitudes..
                 </p>
               </div>
 
               <div className='flex flex-col mt-3 md:mt-auto md:text-lg w-full '>
-                <span className='font-bold flex text-sm md:text-lg text-orange-400 '><MdLocationPin size={25} /> Locations</span>
+                <span className='font-bold flex text-sm md:text-base text-orange-400 '><MdLocationPin size={25} /> Locations</span>
                 <ul className='mt-2 px-1'>
-                  <li className='m-0.5 mt-0.5'><a className='hover:font-bold' href='#'>Kitengela</a></li>
-                  <li className='m-0.5 mt-0.5'><a className='hover:font-bold' href='#'>Isinya</a></li>
-                  <li className='m-0.5 mt-0.5'><a className='hover:font-bold' href='#'>Kisii</a></li>
+                  <li className='m-0.5 mt-0.5'><a className='hover:font-bold text-base' href='#'>Kitengela</a></li>
+                  <li className='m-0.5 mt-0.5'><a className='hover:font-bold text-base' href='#'>Isinya</a></li>
+                  <li className='m-0.5 mt-0.5'><a className='hover:font-bold text-base' href='#'>Kisii</a></li>
                 </ul>
               </div>
             </div>
@@ -30,23 +30,23 @@ const Footer = () => {
             <div className='block md:flex md:text-lg w-full md:w-[60%] md:ms-auto  h-[60%] md:h-[75%] md:rounded-e-xl '>
               <div className='w-full h-[45%] md:h-full py-3 flex md:block justify-between '>
                 <div className='block'>
-                  <span className='font-bold text-sm md:text-lg  text-orange-400 '>About Gethsemane</span>
+                  <span className='font-bold text-sm md:text-base  text-orange-400 '>About Gethsemane</span>
                   <ul className='mt-2 px-1'>
-                    <li className='m-0.5 mt-0.5'><a className='hover:font-bold' href='#'>About us</a></li>
-                    <li className='m-0.5 mt-0.5'><a className='hover:font-bold' href='#'>Our History</a></li>
-                    <li className='m-0.5 mt-0.5'><a className='hover:font-bold' href='#'>Leadership</a></li>
-                    <li className='m-0.5 mt-0.5'><a className='hover:font-bold' href='#'>What We Believe</a></li>
-                    <li className='m-0.5 mt-0.5'><a className='hover:font-bold' href='#'>FAQs</a></li>
+                    <li className='m-0.5 mt-0.5'><a className='hover:font-bold text-base' href='#'>About us</a></li>
+                    <li className='m-0.5 mt-0.5'><a className='hover:font-bold text-base' href='#'>Our History</a></li>
+                    <li className='m-0.5 mt-0.5'><a className='hover:font-bold text-base' href='#'>Leadership</a></li>
+                    <li className='m-0.5 mt-0.5'><a className='hover:font-bold text-base' href='#'>What We Believe</a></li>
+                    <li className='m-0.5 mt-0.5'><a className='hover:font-bold text-base' href='#'>FAQs</a></li>
                   </ul>
                 </div>
               </div>
               <div className='h-[55%] md:h-full w-full py-1 md:py-3  '>
-                <span className='font-bold text-sm md:text-lg md:pt-2 text-orange-400'>Quick links</span>
+                <span className='font-bold text-sm md:text-base md:pt-2 text-orange-400'>Quick links</span>
                 <ul className=' px-1'>
-                  <li className='m-0.5 mt-0.5'><a className='hover:font-bold' href='#'>Home</a></li>
-                  <li className='m-0.5 mt-0.5'><a className='hover:font-bold' href='#'>About us</a></li>
-                  <li className='m-0.5 mt-0.5'><a className='hover:font-bold' href='#'>Ministries</a></li>
-                  <li className='m-0.5 mt-0.5'><a className='hover:font-bold' href='#'>Contact Us</a></li>
+                  <li className='m-0.5 mt-0.5'><a className='hover:font-bold text-base' href='#'>Home</a></li>
+                  <li className='m-0.5 mt-0.5'><a className='hover:font-bold text-base' href='#'>About us</a></li>
+                  <li className='m-0.5 mt-0.5'><a className='hover:font-bold text-base' href='#'>Ministries</a></li>
+                  <li className='m-0.5 mt-0.5'><a className='hover:font-bold text-base' href='#'>Contact Us</a></li>
                 </ul>
               </div>
             </div>

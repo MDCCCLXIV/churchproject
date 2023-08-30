@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 const Hero = () => {
  const images = [
-  { image: '/assets/images/church1.avif', description: "Keeping Watch With Christ" },
+  { image: 'public/assets/images/hdbgchurch.jpg', description: "Keeping Watch With Christ" },
 ];
 
   const [activeIndex, setActiveIndex] = useState(0);
@@ -20,8 +20,8 @@ const Hero = () => {
   const currentImage = images[activeIndex];
 
   return (
-    <div className='flex flex-col items-center justify-center mx-auto md:w-[95%] h-[90vh] md:rounded-2xl text-white bg-cover bg-center bg-no-repeat' style={{ backgroundImage: `url(${import.meta.env.BASE_URL}${currentImage.image})` }}>
-      <div className="flex flex-col md:mx-auto md:max-w-6xl w-full h-full justify-between items-center md:mt-[4%] md:mb-3">
+    <div className='flex flex-col items-center justify-center mx-auto md:w-[100%] h-[90vh]  text-white bg-cover bg-center bg-no-repeat' style={{ backgroundImage: `url(${import.meta.env.BASE_URL}${currentImage.image})` }}>
+      <div className="flex flex-col md:mx-auto md:max-w-6xl w-full h-full justify-between bg-black/40 items-center md:mt-[4%] md:mb-3">
         <div className='flex flex-col h-full w-full justify-between'>
           <div className='flex flex-col w-full m-auto justify-center text-center items-center md:my-auto h-[70%]'>
             <div className="flex flex-col md:w-[70%]">

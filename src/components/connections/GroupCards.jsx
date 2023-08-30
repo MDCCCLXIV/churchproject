@@ -6,7 +6,6 @@ const GroupCards = () => {
     { Title: 'Ladies', Date: '01/01/2023', image: '/assets/images/women.jpg' },
     { Title: 'Men', Date: '01/01/2023', image: '/assets/images/men.webp' },
     { Title: 'Youth', Date: '01/01/2023', image: '/assets/images/church4.avif' },
-    { Title: 'Welfare', Date: '01/01/2023', image: '/assets/images/church4.avif' },
     { Title: 'Worship Team', Date: '01/01/2023', image: '/assets/images/church1.avif' }
   ];
 
@@ -17,27 +16,23 @@ const GroupCards = () => {
           {connection.map((connect, index) => (
             <div
               key={index}
-              className='flex flex-col flex-shrink-0 w-[75%] md:w-[350px] p-1 h-[100%] mx-2 rounded shadow-md bg-white'
+              className='flex flex-col flex-shrink-0 w-[75%] md:w-[300px]  h-[80%] mx-2 rounded-md bg-cover bg-center bg-no-repeat' style={{ backgroundImage: `url(${import.meta.env.BASE_URL}${connect.image})` }}
             >
-              <div className='flex w-full h-[70%] rounded-lg overflow-hidden'>
-                <img
-                  className='object-center w-full h-full object-cover rounde-lg'
-                  src={`${import.meta.env.BASE_URL}${connect.image}`}
-                  alt=''
-                />
+              <div className='flex flex-col h-full w-full rounded-md ' style={{ background: `linear-gradient(rgba(255, 255, 255, 0), rgba(0,0,0,0.6))` }}>
+                <div className='w-full h-[25%] p-2 mt-auto hover:cursor-pointer'>
+                  <span className='text-orange-400 flex font-bold'>{connect.Title}</span>
+                  <span className='text-white text-2xl font-light flex'>{connect.Title}</span>
+                </div>
               </div>
-              <div className='flex w-full h-[30%] flex-col text-sm p-1 my-1'>
-                <span className='w-full text-base font-bold'>{connect.Title}</span>
-                <p className='text-sm mt-1 w-[100%] md:w-[335px]'>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis quae magnam, corporis rem quos mollitia.
-                </p>
-              </div>
-              <button className='w-[50%] md:w-[150px] bg-purple-600 mt-auto mb-2 rounded-full mx-auto'>Explore</button>
-            </div>
+              
+         
+             
+          </div>
           ))}
         </div>
       </div>
     </div>
+    
   );
 };
 

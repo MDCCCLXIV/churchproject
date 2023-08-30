@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { BiUser } from "react-icons/bi";
+import { LiaPlayCircle,LiaDonateSolid } from "react-icons/lia";
 import UserLogin from "../login/UserLogin";
 
 const Header = () => {
@@ -10,7 +11,6 @@ const Header = () => {
 
   function handleHamburgerClick() {
     setMenu(!menu);
- 
   }
 
   function handleUserclick() {
@@ -25,17 +25,16 @@ const Header = () => {
   const humburgerRef = useRef();
 
   useEffect(() => {
-    document.body.style.overflowY = hamburger ? 'auto' : 'hidden';
+    document.body.style.overflowY = hamburger ? "auto" : "hidden";
+    document.body.style.overflowY = !userAccess ? "auto" : "hidden";
     document.addEventListener("click", handleDocumentClick, true);
     document.addEventListener("click", handleMenuClick, true);
-
 
     return () => {
       document.removeEventListener("click", handleDocumentClick, true);
       document.removeEventListener("click", handleMenuClick, true);
-
     };
-  }, [userAccess,hamburger]);
+  }, [userAccess, hamburger]);
 
   const handleDocumentClick = (e) => {
     if (userAccessRef.current && !userAccessRef.current.contains(e.target)) {
@@ -45,12 +44,12 @@ const Header = () => {
   };
   function handleMenuClick() {
     if (humburgerRef.current && !humburgerRef.current.contains(e.target)) {
-      handleHamburgerClick()
+      handleHamburgerClick();
       console.log("clicked");
     }
   }
   return (
-    <div className="flex flex-col w-full items-center  md:mb-[4%]">
+    <div className="flex flex-col w-full items-center  ">
       <div className="flex fixed p-2 mx-auto w-full z-50 bg-white   backdrop-blur-sm md:p-3 text-black shadow-lg text-sm">
         <div className="w-full flex mx-auto max-w-6xl justify-between">
           <div className="flex">
@@ -59,10 +58,19 @@ const Header = () => {
               className="flex m-1  hover:cursor-pointer hover:text-purple-800 duration-700 ease-in-out"
             >
               {hamburger ? (
-                <AiOutlineMenu className="md:flex my-auto m-1 duration-700 " size={25} />
+                <AiOutlineMenu
+                  className="md:flex my-auto m-1 duration-700 "
+                  size={25}
+                />
               ) : (
-                <AiOutlineClose className="md:flex my-auto m-1 duration-700" size={25} />
+                <AiOutlineClose
+                  className="md:flex my-auto m-1 duration-700"
+                  size={25}
+                />
               )}
+            </section>
+            <section  className="flex m-1  hover:cursor-pointer hover:text-purple-800">
+              <LiaPlayCircle  className="md:flex my-auto m-1" size={28} />
             </section>
           </div>
           <div className="flex w-[60%] m-auto">
@@ -74,13 +82,19 @@ const Header = () => {
             </span>
           </div>
           <div className="flex">
-            <span
+          <div
+             className="flex m-1  hover:cursor-pointer hover:text-purple-800 ease-in-out">
+              <LiaDonateSolid size={25}/>
+              <span className="hidden md:flex m-auto mx-1">Give</span>
+            </div>
+            <div
               onClick={handleUserclick}
               className="flex m-1  hover:cursor-pointer hover:text-purple-800 ease-in-out"
             >
               <BiUser size={25} />
-              <span className="hidden md:flex m-auto mx-1">Account</span>
-            </span>
+              <span className="hidden md:flex my-auto mx-1">Account</span>
+            </div>
+           
           </div>
         </div>
       </div>
@@ -89,22 +103,21 @@ const Header = () => {
           <UserLogin ref={userAccessRef} />
         </div>
       )}
-    {hamburger ? 
-    <div className="fixed top-0 left-[-100%] h-full w-full bg-black text-white transform -transition-transform duration-700 ease-in-out ">
-      <div className="h-full flex items-center justify-center">
-        Hello world
-      </div>
-    </div>
-    :
-    <div className="fixed top-0 left-0 z-40 h-full w-full bg-orange-400 text-white transform -transition-transform duration-1000 ease-in-out">
-      <div className="h-full flex items-center justify-center">
-        Hello world
-      </div>
-    </div>
-  }
+      {hamburger ? (
+        <div className="fixed top-0 left-[-100%] h-full w-full bg-black text-white transform -transition-transform duration-700 ease-in-out ">
+          <div className="h-full flex items-center justify-center">
+            Hello world
+          </div>
+        </div>
+      ) : (
+        <div className="fixed top-0 left-0 z-40 h-full w-full bg-orange-400 text-white transform -transition-transform duration-1000 ease-in-out">
+          <div className="h-full flex items-center justify-center">
+            Hello world
+          </div>
+        </div>
+      )}
     </div>
   );
 };
 
 export default Header;
-// Gethsemane
