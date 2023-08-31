@@ -16,7 +16,7 @@ const GroupCards = () => {
           {connection.map((connect, index) => (
             <div
               key={index}
-              className='flex flex-col flex-shrink-0 w-[75%] md:w-[300px]  h-[80%] mx-2 rounded-md bg-cover bg-center bg-no-repeat' style={{ backgroundImage: `url(${import.meta.env.BASE_URL}${connect.image})` }}
+              className='flex flex-col flex-shrink-0 w-[75%] md:w-[300px]  h-[90%] mx-2 rounded-md bg-cover bg-center bg-no-repeat' style={{ backgroundImage: `url(${import.meta.env.BASE_URL}${connect.image})` }}
             >
               <div className='flex flex-col h-full w-full rounded-md ' style={{ background: `linear-gradient(rgba(255, 255, 255, 0), rgba(0,0,0,0.9))` }}>
                 <div className='w-full h-[25%] p-2 mt-auto hover:cursor-pointer'>

@@ -6,7 +6,7 @@ import { AiOutlineCopyrightCircle } from "react-icons/ai";
 const Footer = () => {
   return (
     <div
-      className="w-full h-[100vh] md:h-[55vh] mt-1 text-sm bg-cover bg-center bg-no-repeat text-white"
+      className="w-full min-h-[70vh] max-h-[80vh]  md:h-[55vh] mt-1 text-sm bg-cover bg-center bg-no-repeat text-white"
       style={{
         backgroundImage: `url(${
           import.meta.env.BASE_URL

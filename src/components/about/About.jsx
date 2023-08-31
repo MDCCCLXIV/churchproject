@@ -10,7 +10,7 @@ const About = () => {
 
   return (
     <div>
-      <div className='flex flex-col w-full h-[75vh] md:h-[50vh] p-2 '>
+      <div className='flex flex-col w-full min-h-[75vh] max-h-[80vh] md:h-[50vh] p-2 '>
         <div className='block md:flex w-full h-full md:h-full md:mx-auto md:max-w-6xl'>
           <div className='flex w-full flex-col md:w-[35%] m-auto h-[30%]'>
             <span className='text-2xl font-bold text-center'>Welcome to Gethsemane</span>

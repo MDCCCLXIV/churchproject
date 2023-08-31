@@ -3,7 +3,7 @@ import Videos from '../../features/videos/Videos'
 
 const Services = () => {
   return (
-    <div className='flex flex-col items-center justify-center w-full h-[100vh] p-1'>
+    <div className='flex flex-col items-center justify-center w-full  min-h-screen p-1'>
          <div className="block md:flex md:mx-auto md:max-w-6xl w-full h-full md:h-[90%] md:my-auto justify-between">
           <div className="flex flex-col md:h-full w-full h-[32%] md:w-[40%] pt-3 md:pt-0 md:justify-center ">
               <span className='font-medium text-lg text-center md:mb-3 md:text-start text-orange-400 uppercase p-2'>Access unlimited content</span>
