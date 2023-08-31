@@ -19,7 +19,7 @@ const Groups = () => {
           believers for support and encouragement.
         </p>
       </div>
-      <div className="flex w-full h-[60%] mt-auto items-center justify-center outline outline-green-400">
+      <div className="flex w-full h-[60%] mt-auto items-center justify-center ">
         <div className="w-full h-full">
           <GroupCards />
         </div>
