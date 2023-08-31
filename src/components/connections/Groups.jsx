@@ -4,7 +4,7 @@ import GroupCards from './GroupCards';
 
 const Groups = () => {
   return (
-    <div className="flex flex-col w-full min-h-[70vh] max-h-[75vh] mx-auto justify-between">
+    <div className="flex flex-col w-full min-h-[75vh] max-h-[85vh] mx-auto justify-between">
       <div className="flex flex-col h-[40%] mx-auto w-full text-center">
       <span className="text-4xl md:w-[80%] mx-auto w-full mb-3 text-center">
           Connections
